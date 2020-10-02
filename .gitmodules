@@ -1,0 +1,3 @@
+[submodule "scripts/Leaflet.Graticule"]
+	path = scripts/Leaflet.Graticule
+	url = https://github.com/zacharyburnettNOAA/Leaflet.Graticule.git

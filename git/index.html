@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="Git" name="Description">
+
+    <title>Getting Started with Git</title>
+</head>
+<body id="preview">
+<h2>What Is Git?</h2>
+<p>Git is a very easy way for a lot of people to work on the same files at once without conflict and with a detailed history of all changes. Its designed to let multiple
+    developers work on separate features of the same project simultaneously. Git is organized into a hierarchy of <strong>repositories</strong> (individual coding
+    projects) and <strong>branches</strong> (separate versions of the same project). A similar example of this concept would be Microsoft’s SharePoint software.
+</p>
+<p>The workflow is relatively simple: first, you <strong>clone</strong> the remote repository from a Git server (for instance GitHub), which makes a local copy of all the
+    files and version history on your own computer. Then, you make the changes you want to make to your local copy, and wrap up all your changes into a packaged
+    difference file called a <strong>commit</strong>, to which you can attach a message describing what you’ve changed. Once you’ve made one (or several) commits, you can
+    then <strong>push</strong> all the commits to GitHub, which is when your changes travel back to the remote repository and are applied for everyone to see. Git will
+    automatically resolve most conflicts with changes that other people have made in the meantime, even multiple changes to the same file.
+</p>
+<p>Repositories can have different <strong>branches</strong>. Branches are parallel instances of the code, used to keep track of separate issues or features. Each branch
+    is made up of a distinct set of changes from the master files, all related to the specific feature that the branch represents. In Git, you <strong>checkout</strong> a
+    branch to switch your local files to its specific changes. Once these issues or features are implemented, branches can be <strong>merged</strong> back together,
+    folding all the changes made since they were split and combining their files. Common convention when working with Git is to have a <strong>master</strong> branch, the
+    current stable codebase for the users, a <strong>develop</strong> branch, for all the newly developed changes or features that haven’t been fully tested yet, and a
+    multitude of other branches for individual features where all the actual work is done.
+</p>
+<hr>
+<h2>Getting Started</h2>
+<p>Install the
+    <a href="https://desktop.github.com/">GitHub Desktop application</a>
+    , then read the steps below. GitHub Desktop installs a GUI (graphical user interface) for using Git, as well as a command line interface, implementing Bash on
+    Windows, for more traditional Git use. Below each step is a code box with the relevant command. It is not necessary to know or use these commands if you use the GUI,
+    but it helps to understand the traditional Git interface in case you need to perform more advanced Git actions like conflict resolution or rebasing.
+</p>
+<ol>
+    <li>
+        <p><strong>Clone</strong> a repository to your local workspace (make sure to specify your desired workspace location on your computer).</p>
+        <pre><code>git clone https://github.com/UMDBPP/PacketRaven.git /path/to/your/workspace/</code></pre>
+    </li>
+    <li>
+        <p>Get to know the <strong>branch</strong>es for the repository you just cloned, and figure out which one you want to work on.</p>
+        <pre><code>git branch -a</code></pre>
+    </li>
+    <li>
+        <p><strong>Checkout</strong> the branch you want to work on (this switches your local files to that branch).</p>
+        <pre><code>git checkout branch-name</code></pre>
+    </li>
+    <li>
+        <p>After you make your changes (using your editor or IDE of choice), check the <strong>status</strong> of your changed files, and make sure you haven’t made any
+            unintended changes.
+        </p>
+        <pre><code>git status</code></pre>
+    </li>
+    <li>
+        <p><strong>Commit</strong> your changes (wrap them up into an easy delta) with a descriptive message.</p>
+        <pre><code>git commit -a -m &quot;Here is a description of what I changed&quot;</code></pre>
+    </li>
+    <li>
+        <p><strong>Pull</strong> any changes or new branches other people have made and then <strong>push</strong> your own changes to GitHub (these are combined into the
+            Sync button in the GUI). Make sure you are on the right branch or you may make unintentional changes to someone else’s work!
+        </p>
+        <pre><code>git pull &amp;&amp; git push</code></pre>
+    </li>
+</ol>
+
+</body>
+</html>
