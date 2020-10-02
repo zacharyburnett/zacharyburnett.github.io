@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1" name="viewport">
-    <meta content="NOAA chart" name="description">
 
-    <title>NOAA Charts</title>
+    <title>Maritime Chart</title>
     <link href="#" rel="shortcut icon">
     <link href="/content.css" rel="stylesheet">
 
@@ -16,8 +15,8 @@
     <script crossorigin="anonymous" integrity="sha384-DL7eGqoOlv945OvbqUi4altKSFN7PJUDrz2OTS19mO5ffBunmZ+wlP7e8WouhMYO"
             src="https://unpkg.com/leaflet-providers@1.10.1/leaflet-providers.js"></script>
 </head>
-<body>
-<div id="map" style="width: 100%; height: 100%;"></div>
+<body style="display: flex; flex-direction: column;">
+<div id="map" style="flex-grow: 1;"></div>
 </body>
 <script async>
     let map = L.map('map', {zoomSnap: 0, touchZoom: true, dragging: true, zoomControl: false});

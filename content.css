@@ -1,31 +1,30 @@
 @charset "UTF-8";
 html, body {
-    font-family: "Roboto", sans-serif;
-    font-size:   16pt;
+    font-family: source-sans-pro, "Roboto", sans-serif;
+    font-size:   large;
     height:      100%;
     margin:      0;
 }
 
 .container {
-    display:         flex;
-    justify-content: space-around;
+    display:   flex;
+    flex-wrap: wrap;
+}
+
+.item {
+    flex-grow:   1;
+    flex-shrink: 3;
 }
 
 .box {
-    flex-grow:   1;
-    flex-shrink: 3;
-    margin:      2ch;
-    padding:     2ch;
-    text-align:  left;
-    border:      solid;
+    margin:     2ch;
+    padding:    2ch;
+    text-align: left;
+    border:     solid;
 }
 
 @media screen and (max-width: 990px) {
-    .container {
-        flex-wrap: wrap;
-    }
-
-    .box:first-child {
-        flex-basis: 100%;
+    h1 {
+        font-size: x-large;
     }
 }

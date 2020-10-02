@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1" name="viewport">
-    <meta content="scale map" name="description">
 
     <title>Scale</title>
     <link href="#" rel="shortcut icon">
@@ -18,8 +17,8 @@
 
     <script src="../scripts/Leaflet.Graticule/Leaflet.Graticule.js"></script>
 </head>
-<body>
-<div id="map" style="width: 100%; height: 100%;"></div>
+<body style="display: flex; flex-direction: column;">
+<div id="map" style="flex-grow: 1;"></div>
 </body>
 <script async>
     let base_layers = {
