@@ -7,23 +7,32 @@ html, body {
 }
 
 .container {
-    display:   flex;
-    flex-wrap: wrap;
+    display: flex;
 }
 
 .item {
-    flex-grow:   1;
-    flex-shrink: 3;
+    flex: 1 2 auto;
 }
 
 .box {
-    margin:     2ch;
-    padding:    2ch;
+    margin:  2ch;
+    padding: 2ch;
+    border:  solid;
+}
+
+ul {
     text-align: left;
-    border:     solid;
 }
 
 @media screen and (max-width: 990px) {
+    .container {
+        flex-wrap: wrap;
+    }
+
+    .item {
+        flex-basis: 100%;
+    }
+
     h1 {
         font-size: x-large;
     }
