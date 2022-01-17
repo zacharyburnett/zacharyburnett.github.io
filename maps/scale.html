@@ -22,7 +22,8 @@
 </body>
 <script async>
     let base_layers = {
-        'Esri Topography': L.tileLayer.provider('Esri.WorldTopoMap'), 'Esri Imagery': L.tileLayer.provider('Esri.WorldImagery')
+        'Esri Topography': L.tileLayer.provider('Esri.WorldTopoMap'),
+        'Esri Imagery': L.tileLayer.provider('Esri.WorldImagery')
     };
 
     let map = L.map('map', {
@@ -37,7 +38,11 @@
         color: '#000',
         font: '16px Verdana',
         dashArray: [5, 5],
-        zoomInterval: [{start: 0, end: 4, interval: 45}, {start: 4, end: 6, interval: 10}, {start: 6, end: 9, interval: 1}, {
+        zoomInterval: [{start: 0, end: 4, interval: 45}, {start: 4, end: 6, interval: 10}, {
+            start: 6,
+            end: 9,
+            interval: 1
+        }, {
             start: 9, end: 12, interval: 0.1
         }, {start: 12, end: 16, interval: 0.01}, {start: 16, end: 18, interval: 0.001}]
     }));

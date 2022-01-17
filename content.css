@@ -1,39 +1,39 @@
 @charset "UTF-8";
 html, body {
-    font-family : source-sans-pro, "Roboto", sans-serif;
-    font-size   : large;
-    height      : 100%;
-    margin      : 0;
+    font-family: source-sans-pro, "Roboto", sans-serif;
+    font-size: large;
+    height: 100%;
+    margin: 0;
 }
 
 .container {
-    display : flex;
+    display: flex;
 }
 
 .item {
-    flex : 1 2 auto;
+    flex: 1 2 auto;
 }
 
 .box {
-    margin  : 2ch;
-    padding : 2ch;
-    border  : solid;
+    margin: 2ch;
+    padding: 2ch;
+    border: solid;
 }
 
 ul {
-    text-align : left;
+    text-align: left;
 }
 
-@media screen and (max-width : 990px) {
+@media screen and (max-width: 990px) {
     .container {
-        flex-wrap : wrap;
+        flex-wrap: wrap;
     }
 
     .item {
-        flex-basis : 100%;
+        flex-basis: 100%;
     }
 
     h1 {
-        font-size : x-large;
+        font-size: x-large;
     }
 }

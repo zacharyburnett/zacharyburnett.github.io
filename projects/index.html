@@ -11,7 +11,7 @@
 <body style="display: flex; flex-direction: column;">
 <a href="/"><-- home</a>
 <div style="text-align: center;">
-    <h1>Projects I Contribute To</h1>
+    <h1>Projects To Which I Have Contributed</h1>
 </div>
 <hr style="margin: 2ch;">
 <div class="container" style="text-align: center;">
@@ -19,45 +19,53 @@
         <h1>Personal</h1>
         <hr>
         <a href="https://github.com/zacharyburnett">github.com/zacharyburnett</a>
-        <h3>Applications</h3>
         <ul>
             <li>
+                <a href="https://github.com/zacharyburnett/TypePigeon/">TypePigeon</a> - simple Python type converter
+                and caster
+            </li>
+            <li>
                 <a href="http://nearspace.umd.edu/predicts/">Balloon Prediction Viewer</a>
-                - web map showing CUSF weather balloon flight predictions over FAA restricted airspace across the United States, designed to help
+                - web map showing CUSF weather balloon flight predictions over FAA restricted airspace across the United
+                States, designed to help
                 balloon payload teams select a suitable launch site up to 6 days in advance of a scheduled flight
                 <br>
                 <a href="http://nearspace.umd.edu/predicts/">
-                    <img alt="Balloon Prediction Viewer" src="images/balloon_prediction_viewer_snapshot.png" style="width: 100%;">
+                    <img alt="Balloon Prediction Viewer" src="images/balloon_prediction_viewer_snapshot.png"
+                         style="width: 100%;">
                 </a>
             </li>
             <li>
                 <a href="https://pypi.org/project/packetraven/">PacketRaven</a>
-                - balloon payload tracker written in Python, offering a telemetry dashboard for an active weather balloon flight broadcasting in APRS
+                - balloon payload tracker written in Python, offering a telemetry dashboard for an active weather
+                balloon flight broadcasting in APRS
                 <br>
                 <img alt="PacketRaven" src="images/packetraven_snapshot.png" style="width: 100%;">
             </li>
             <li>
                 <a href="https://pypi.org/project/tablecrow/">TableCrow</a>
-                - abstraction layer over PostGreSQL and SQLite database tables, offering a common Pythonic API for record insertion / query /
+                - abstraction layer over PostGreSQL and SQLite database tables, offering a common Pythonic API for
+                record insertion / query /
                 deletion, along with simple storage and operations of spatial data
             </li>
-        </ul>
-        <h3>Other Projects</h3>
-        <ul>
             <li>
-                <a href="https://github.com/UMDBPP/VIRDE">UMDBPP/VIRDE</a> - Arduino payload code for a remote sensing system based on the Raspberry
+                <a href="https://github.com/UMDBPP/VIRDE">UMDBPP/VIRDE</a> - Arduino payload code for a remote sensing
+                system based on the Raspberry
                 PiCam v2
             </li>
             <li>
-                <a href="https://github.com/UMDBPP/georeferencer">UMDBPP/georeferencer</a> - image orthorectification workflow designed for use with
+                <a href="https://github.com/UMDBPP/georeferencer">UMDBPP/georeferencer</a> - image orthorectification
+                workflow designed for use with
                 outputs from VIRDE (above)
             </li>
             <li>
-                <a href="https://github.com/UMDBPP/BalloonDataAnalysis">UMDBPP/BalloonDataAnalysis</a> - R library for parsing payload data for the
+                <a href="https://github.com/UMDBPP/BalloonDataAnalysis">UMDBPP/BalloonDataAnalysis</a> - R library for
+                parsing payload data for the
                 University of Maryland Balloon Payload Program
             </li>
             <li>
-                <a href="https://github.com/UMDBPP/Cutdown">UMDBPP/Cutdown</a> - Arduino payload code for mechanical cutdown device
+                <a href="https://github.com/UMDBPP/Cutdown">UMDBPP/Cutdown</a> - Arduino payload code for mechanical
+                cutdown device
             </li>
         </ul>
     </section>
@@ -65,28 +73,44 @@
         <h1>NOAA Office of Coast Survey</h1>
         <hr>
         <a href="https://github.com/zacharyburnettNOAA">github.com/zacharyburnettNOAA</a>
-        <h3>Applications</h3>
         <ul>
             <li>
                 <a href="https://github.com/noaa-ocs-modeling/CoupledModelDriver">CoupledModelDriver</a>
-                - Python-based driver for generating perturbed configurations for a coupled Earth modeling system, utilizing the National Unified
-                Operational Prediction Capability (NUOPC) / NOAA Environmental Modeling System (NEMS) to force circulation models (ADCIRC, SCHISM)
+                - Python configuration generation system for a coupled Earth modeling system,
+                utilizing the National Unified
+                Operational Prediction Capability (NUOPC) / NOAA Environmental Modeling System (NEMS) to force
+                circulation models (ADCIRC, SCHISM)
                 with inputs from supplementary models (WaveWatch III, GFS, NWM) and tidal spin-up (TPXO / HAMTIDE).
             </li>
             <li>
+                <a href="https://github.com/noaa-ocs-modeling/StormEvents">StormEvents</a>
+                - Python library for retrieving NOAA observational data from named storm events, providing a standard
+                interface with multiple disparate APIs provided by U.S. government agencies.
+            </li>
+            <li>
+                <a href="https://github.com/noaa-ocs-modeling/EnsemblePerturbation">EnsemblePerturbation</a>
+                - Python library for spatially perturbing storm event tracks, and parsing ensemble output into a
+                surrogate approximation using polynomial chaos and Karhunen-Loeve expansion across spatiotemporal model
+                outputs.
+            </li>
+            <li>
                 <a href="https://github.com/noaa-ocs-modeling/ADC-WW3-NWM-NEMS">CoastalApp</a>
-                - parameterized build template of the NOAA Environmental Modeling System (NEMS), including FORTRAN caps for ADCIRC, SCHISM, WaveWatch
+                - parameterized build template of the NOAA Environmental Modeling System (NEMS), including FORTRAN caps
+                for ADCIRC, SCHISM, WaveWatch
                 III (WW3) / WW3DATA (static WW3), ATMESH (static GFS), and the National Water Model (NWM)
             </li>
             <li>
                 <a href="https://pypi.org/project/nemspy">NEMSpy</a>
-                - configuration generation for the NOAA Environmental Modeling System (NEMS), implementing the National Unified Operational Prediction
-                Capability (NUOPC) to couple oceanic models such as ADCIRC, WaveWatch III, GFS, HWRF, etc. Used in the overarching CoupledModelDriver
+                - configuration generation for the NOAA Environmental Modeling System (NEMS), implementing the National
+                Unified Operational Prediction
+                Capability (NUOPC) to couple oceanic models such as ADCIRC, WaveWatch III, GFS, HWRF, etc. Used in the
+                overarching CoupledModelDriver
                 project.
             </li>
             <li>
                 <a href="https://coastaloceanmodels.noaa.gov/WCOFS/viewer/">OFS Viewer</a>
-                - web map showing daily NetCDF fields from NOAA coastal ocean models, highlighting the West Coast Operational Forecasting System
+                - web map showing daily NetCDF fields from NOAA coastal ocean models, highlighting the West Coast
+                Operational Forecasting System
                 (WCOFS)
                 <br>
                 <a href="https://coastaloceanmodels.noaa.gov/WCOFS/viewer/">
@@ -94,18 +118,20 @@
                 </a>
             </li>
             <li>
-                <a href="https://github.com/JaimeCalzadaNOAA/adcircpy">JaimeCalzadaNOAA/ADCIRCpy</a> - Python wrapper for the Advanced Circulation
+                <a href="https://github.com/zacharyburnettNOAA/adcircpy">zacharyburnettNOAA/ADCIRCpy</a> - Python
+                wrapper
+                for the Advanced Circulation
                 Model (ADCIRC), providing configuration generation and pre- and post-processing of inputs and outputs
             </li>
-        </ul>
-        <h3>Other Projects</h3>
-        <ul>
             <li>
-                <a href="https://github.com/noaa-ocs-modeling/PyOFS">noaa-ocs-modeling/PyOFS</a> - Python library providing data access and conversion
-                for observational data products used for validation and skill assessment of operational forecasting systems (OFS)
+                <a href="https://github.com/noaa-ocs-modeling/PyOFS">noaa-ocs-modeling/PyOFS</a> - Python library
+                providing data access and conversion
+                for observational data products used for validation and skill assessment of operational forecasting
+                systems (OFS)
             </li>
             <li>
-                <a href="https://nauticalcharts.noaa.gov/updates/building-the-national-bathymetry">National Bathymetric Source project</a> - Python
+                <a href="https://nauticalcharts.noaa.gov/updates/building-the-national-bathymetry">National Bathymetric
+                    Source project</a> - Python
                 workflow for ingesting and standardizing bathymetric survey data into a single national source dataset
             </li>
         </ul>
