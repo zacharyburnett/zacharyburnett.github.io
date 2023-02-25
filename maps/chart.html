@@ -1,49 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
 
-    <title>Maritime Chart</title>
-    <link href="#" rel="shortcut icon">
-    <link href="/content.css" rel="stylesheet">
+  <title>Maritime Chart</title>
+  <link href="#" rel="shortcut icon">
+  <link href="/content.css" rel="stylesheet">
 
-    <script crossorigin="anonymous" integrity="sha384-wKOriz2x8/bF1D9t6PuKhSpxfhHeVi9huvyuxJrrShSJpi5+rmRIsM90UuWbdAYJ"
-            src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
-    <link crossorigin="anonymous" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
-          integrity="sha384-eS4bw6aEvhCSXWGP85ANR/N8isWKzT7P36NvcuTJGkrj6wsbxLVpXslrNXYHyseD" rel="stylesheet">
-    <script crossorigin="anonymous" integrity="sha384-DL7eGqoOlv945OvbqUi4altKSFN7PJUDrz2OTS19mO5ffBunmZ+wlP7e8WouhMYO"
-            src="https://unpkg.com/leaflet-providers@1.10.1/leaflet-providers.js"></script>
+  <script crossorigin="anonymous" integrity="sha384-wKOriz2x8/bF1D9t6PuKhSpxfhHeVi9huvyuxJrrShSJpi5+rmRIsM90UuWbdAYJ"
+    src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+  <link crossorigin="anonymous" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+    integrity="sha384-eS4bw6aEvhCSXWGP85ANR/N8isWKzT7P36NvcuTJGkrj6wsbxLVpXslrNXYHyseD" rel="stylesheet">
+  <script crossorigin="anonymous" integrity="sha384-DL7eGqoOlv945OvbqUi4altKSFN7PJUDrz2OTS19mO5ffBunmZ+wlP7e8WouhMYO"
+    src="https://unpkg.com/leaflet-providers@1.10.1/leaflet-providers.js"></script>
 </head>
+
 <body style="display: flex; flex-direction: column;">
-<div id="map" style="flex-grow: 1;"></div>
+  <div id="map" style="flex-grow: 1;"></div>
 </body>
 <script async>
-    let map = L.map('map', {zoomSnap: 0, touchZoom: true, dragging: true, zoomControl: false});
+  let map = L.map('map', {zoomSnap: 0, touchZoom: true, dragging: true, zoomControl: false});
 
-    map.createPane('default');
-    map.getPane('default').style.zIndex = 100;
+  map.createPane('default');
+  map.getPane('default').style.zIndex = 100;
 
-    map.setView(L.latLng([40, -100]), 5);
+  map.setView(L.latLng([40, -100]), 5);
 
-    let base_layers = {
-        'NOAA RNC': L.tileLayer('https://tileservice.charts.noaa.gov/tiles/50000_1/{z}/{x}/{y}.png', {transparent: true}),
-        'NOAA ENC': L.tileLayer.wms('https://gis.charttools.noaa.gov/arcgis/rest/services/MCS/ENCOnline/MapServer/exts/MaritimeChartService/WMSServer', {transparent: true}),
-        'Esri Ocean': L.tileLayer.provider('Esri.OceanBasemap', {transparent: true})
-    };
+  let base_layers = {
+    'NOAA RNC': L.tileLayer('https://tileservice.charts.noaa.gov/tiles/50000_1/{z}/{x}/{y}.png', {transparent: true}),
+    'NOAA ENC': L.tileLayer.wms('https://gis.charttools.noaa.gov/arcgis/rest/services/MCS/ENCOnline/MapServer/exts/MaritimeChartService/WMSServer', {transparent: true}),
+    'Esri Ocean': L.tileLayer.provider('Esri.OceanBasemap', {transparent: true})
+  };
 
-    let esri_gray_basemap = L.tileLayer.provider('Esri.WorldGrayCanvas', {pane: 'default'});
+  let esri_gray_basemap = L.tileLayer.provider('Esri.WorldGrayCanvas', {pane: 'default'});
 
-    base_layers['NOAA RNC'].on('add', function (event) {
-        event.target._mapToAdd.addLayer(esri_gray_basemap);
-    });
-    base_layers['NOAA ENC'].on('add', function (event) {
-        event.target._mapToAdd.addLayer(esri_gray_basemap);
-    });
+  base_layers['NOAA RNC'].on('add', function (event) {
+    event.target._mapToAdd.addLayer(esri_gray_basemap);
+  });
+  base_layers['NOAA ENC'].on('add', function (event) {
+    event.target._mapToAdd.addLayer(esri_gray_basemap);
+  });
 
-    map.addControl(L.control.layers(base_layers, {}));
-    map.addControl(L.control.scale({'position': 'bottomright'}));
+  map.addControl(L.control.layers(base_layers, {}));
+  map.addControl(L.control.scale({'position': 'bottomright'}));
 
-    map.addLayer(base_layers['NOAA RNC']);
+  map.addLayer(base_layers['NOAA RNC']);
 </script>
+
 </html>
